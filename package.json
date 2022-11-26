@@ -4,6 +4,7 @@
   "description": "",
   "type": "module",
   "main": "server.js",
+  "homepage": "https://brb-production.up.railway.app",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./server.js",
