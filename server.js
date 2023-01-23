@@ -12,8 +12,8 @@ dotenv.config();
 connectDatabase();
 const app = express();
 
-app.use(express.json());
-//app.use(express.static('build'));
+//app.use(express.json());
+app.use(express.static('build'));
 
 //API
 app.use("/api/services", serviceRouter);
