@@ -11,11 +11,11 @@ import removedDateRouter from "./Routes/RemovedDateRoutes.js";
 dotenv.config();
 connectDatabase();
 const app = express();
-app.use(express.json());
+//app.use(express.json());
 
 app.use(express.static('build'));
 
-//APII 
+//API
 app.use("/api/services", serviceRouter);
 app.use("/api/orders", orderRouter);
 app.use("/api/users", userRouter);
