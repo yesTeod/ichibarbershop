@@ -32,6 +32,55 @@ orderRouter.post(
                 additionalMessage,
             })
             const createOrder = await order.save();
+            
+            const transporter = nodemailer.createTransport({
+                service: 'gmail',
+                auth: {
+                    user:process.env.gmailname,
+                    pass:process.env.gmailpass,
+                }
+            });
+
+            let price; 
+            switch(service) {
+                case "635ffcd2643f25bfc574f51b":
+                    price = 15;
+                    break;
+                case "635ffcd2643f25bfc574f51c":
+                    price = 10;
+                    break;
+                case "635ffcd2643f25bfc574f51f":
+                    price = 5;
+                    break; 
+                case "635ffcd2643f25bfc574f51d":
+                    price = 25;
+                    break;  
+                case "635ffcd2643f25bfc574f51e":
+                    price = 15;
+                    break;
+                case "635ffcd2643f25bfc574f520":
+                    price = 15;
+                    break;   
+                default:
+                    price = 0;
+            }
+            
+            const mailOptions = {
+                from: process.env.gmailname,
+                to: email,
+                subject: 'Приета поръчка',
+                
+                text: `ICHI BARBERSHOP\nЗдравей, ${name} - Благодаря ти, че запази час през сайта.\n----------------------------------------------------------------------------- \nОчакваме ви на:\n${moment(serviceTime).clone().subtract(2, 'hour').format(`DD/MM/YYYY от H:mm`)}\n\n\nобща стойност: ${price}.00 лв`,
+            };
+
+            transporter.sendMail(mailOptions, function (error, info) {
+                if (error) {
+                    console.log(error);
+                } else {
+                    console.log('Email sent: ' + info.response);
+                }
+            });
+
             res.status(201).json(createOrder);
         }
     })
