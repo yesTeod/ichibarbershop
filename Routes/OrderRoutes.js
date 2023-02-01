@@ -72,7 +72,7 @@ orderRouter.post(
                 to: email,
                 subject: 'Приета поръчка',
                 
-                text: `ICHI BARBERSHOP\nЗдравей, ${name} - Благодаря ти, че запази час през сайта.\n----------------------------------------------------------------------------- \nОчакваме ви на:\n${moment(serviceTime).clone().subtract(2, 'hour').format(`DD/MM/YYYY от H:mm`)}\n\n\nобща стойност: ${price}.00 лв`,
+                text: `ICHI BARBERSHOP\nЗдравей, ${name} - Благодаря ти, че запази час през сайта.\n----------------------------------------------------------------------------- \nОчакваме ви на:\n${moment(serviceTime).format(`DD/MM/YYYY от H:mm`)}\n\n\nобща стойност: ${price}.00 лв`,
             };
 
             transporter.sendMail(mailOptions, function (error, info) {
