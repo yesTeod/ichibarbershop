@@ -3,7 +3,7 @@
 A comprehensive full-stack app for intuitive booking management. Successfully implemented and used by a local barbershop for 4 months. The system streamlined daily operations improving the barber's workflow efficiency.
 
 ![ichimain](https://github.com/user-attachments/assets/2e19bf23-5a59-4b6c-8bc2-48abe2a18325)
-![ichibook](https://github.com/user-attachments/assets/c3512376-9535-4a9a-a366-98062fcbe095)
+![ichibook](https://github.com/user-attachments/assets/0b29bebd-fbc1-4f36-b06b-50cd436a695a)
 
 ## Features
 - Secure JWT-based authentication system for admin access
