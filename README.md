@@ -4,6 +4,7 @@ A full-stack app for intuitive booking management. Successfully implemented and 
 
 ![ichimain](https://github.com/user-attachments/assets/2e19bf23-5a59-4b6c-8bc2-48abe2a18325)
 ![ichibook](https://github.com/user-attachments/assets/0b29bebd-fbc1-4f36-b06b-50cd436a695a)
+![ichidashboard](https://github.com/user-attachments/assets/9125930e-7cbe-41b1-b182-1c4de86ec571)
 
 ## Features
 - Secure JWT-based authentication system for admin access
